@@ -35,14 +35,14 @@
     {%endfor%}
 
     <section>
-      <div style="width: 75%; margin: auto; text-align: center; color: white;">
-        Categoría(s):
-        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-          {% for category in categories_all %}
-            <a href="{% url 'blog_categories' category.id %}" style="margin: 5px 10px;">{{ category.name }}</a>
-          {% endfor %}
+        <div style="width: 75%; margin: auto; text-align: center; color: white;">
+          Categories:
+          <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            {% for category in categories__all %}
+              <a href="{% url 'blog_categories' category.id %}" style="margin: 5px 10px;">{{ category.name }}</a>
+            {% endfor %}
+          </div>
         </div>
-      </div>
-    </section>
-    
+      </section>
+      
 {% endblock%}
