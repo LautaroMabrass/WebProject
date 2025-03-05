@@ -39,7 +39,7 @@
           Categories:
           <div style="display: flex; flex-wrap: wrap; justify-content: center;">
             {% for category in categories__all %}
-              <a href="{% url 'blog_categories' category.id %}" class="category_bton"style="margin: 5px 10px;">{{ category.name }}</a>
+              <a href="{% url 'blog_categories' category.id %}" style="margin: 5px 10px; color: white ;">{{ category.name }}</a>
             {% endfor %}
           </div>
         </div>

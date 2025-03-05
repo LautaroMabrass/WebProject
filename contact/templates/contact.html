@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Contact - Myapp{% endblock %}
+
+{% block content%}
+    <div class="contentForm">
+        <table style="color:white;" action="">
+            {{new_form.as_table}}
+        </table>
+    </div>
+
+    <button>
+        Send
+    </button>
+{% endblock%}

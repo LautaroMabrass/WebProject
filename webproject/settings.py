@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'AppWeb',
     'services',
     'blog',
+    'contact',
 ]
 
 MIDDLEWARE = [

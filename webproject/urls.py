@@ -25,5 +25,6 @@ urlpatterns = [
     path('',include('AppWeb.urls')),
     path('services/', include('services.urls')),
     path('blog/', include('blog.urls')),
+    path('contact/', include('contact.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

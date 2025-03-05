@@ -269,3 +269,7 @@ padding-top: .75rem;
 font-style: italic;
 color: red;
 }
+
+.contentForm {
+    background-color: rgb(24, 64, 8);
+}
