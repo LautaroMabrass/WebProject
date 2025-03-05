@@ -9,6 +9,11 @@
       <div class="success-tick">
         <i class="fas fa-check tick-verde"></i>
       </div>
+    {% elif 'notvalid' in request.GET %}
+      <p class="success-text">Ups, something has gone wrong!</p>
+      <div class="unsuccess-tick">
+        <i class="fas fa-times cross-roja"></i> 
+      </div>
     {% else %}
       <form method="post">
         {% csrf_token %}
