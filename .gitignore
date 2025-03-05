@@ -10,3 +10,5 @@ __pycache__/
 .env
 .DS_Store
 webproject/settings.py 
+get-pip.py
+db.sqlite3
