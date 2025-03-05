@@ -1,48 +1,45 @@
 {% extends 'base.html' %}
-
 {% load static %}
-{% block title %}blog - Myapp{% endblock %}
 
-
-{% block content%}
-    {% for x in post_all%}
+{% block title %}Blog - Myapp{% endblock %}
+{% block content %}
+  {% for x in post_all %}
     <section class="page-section clearfix">
-        <div class="container">
-          <div class="intro">
-            {% if x.image %}
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ x.image.url }}" alt="{{ x.title }}">
-            {% else %}
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/default.png' %}" alt="{{ x.title }}">
-            {% endif %}
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-              <h2 class="section-heading mb-4" >
-                <span class="section-heading-lower">{{x.title}}</span>
-                <span class="section-heading-upper">{{x.content}}</span>
-              </h2>  
-              <div style="text-align: left; font-size: 0.8em;">
-                Author: {{x.author}}
-              </div>
-              <div style="text-align: left; font-size: 0.8em;">
-                categoria(s): 
-                            {% for z in x.category.all %}
-                                {{z.name}}. 
-                            {% endfor %}
-              </div>         
+      <div class="container">
+        <div class="intro blog-post">
+          {% if x.image %}
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ x.image.url }}" alt="{{ x.title }}">
+          {% else %}
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/default.png' %}" alt="{{ x.title }}">
+          {% endif %}
+          <div class="intro-text">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-lower">{{ x.title }}</span>
+              <span class="section-heading-upper">{{ x.content }}</span>
+            </h2>
+            <div class="post-meta">
+              Author: {{ x.author }}
+            </div>
+            <div class="post-meta">
+              Categories:
+              {% for z in x.category.all %}
+                {{ z.name }}.
+              {% endfor %}
             </div>
           </div>
         </div>
-    </section>
-    {%endfor%}
-
-    <section>
-      <div style="width: 75%; margin: auto; text-align: center; color: white;">
-        Categories:
-        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-          {% for category in categories_all %}
-            <a href="{% url 'blog_categories' category.id %}" style="margin: 5px 10px; color: white;">{{ category.name }}</a>
-          {% endfor %}
-        </div>
       </div>
     </section>
-    
-{% endblock%}
+  {% endfor %}
+
+  <section class="page-section">
+    <div class="container">
+      <div class="category-list text-center">
+        {% for category in categories_all %}
+          <a href="{% url 'blog_categories' category.id %}">{{ category.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

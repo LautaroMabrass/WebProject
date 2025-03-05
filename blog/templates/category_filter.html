@@ -34,15 +34,15 @@
     </section>
     {%endfor%}
 
-    <section>
-        <div style="width: 75%; margin: auto; text-align: center; color: white;">
-          Categories:
-          <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-            {% for category in categories__all %}
-              <a href="{% url 'blog_categories' category.id %}" style="margin: 5px 10px; color: white ;">{{ category.name }}</a>
-            {% endfor %}
-          </div>
+    <section class="page-section">
+      <div class="container">
+        <div class="category-list text-center">
+          <a href="{% url 'blog'%}">All categories</a>
+          {% for category in categories__all %}
+            <a href="{% url 'blog_categories' category.id %}">{{ category.name }}</a>
+          {% endfor %}
         </div>
-      </section>
+      </div>
+    </section>
       
 {% endblock%}
