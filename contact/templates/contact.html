@@ -4,10 +4,17 @@
 {% block title %}Contact - Myapp{% endblock %}
 {% block content %}
   <div class="contentForm">
-    <form method="post">
-      {% csrf_token %}
-      {{ new_form.as_p }}
-      <button type="submit">Send</button>
-    </form>
+    {% if 'valid' in request.GET %}
+      <p class="success-text">Data has been sent correctly!</p>
+      <div class="success-tick">
+        <i class="fas fa-check tick-verde"></i>
+      </div>
+    {% else %}
+      <form method="post">
+        {% csrf_token %}
+        {{ new_form.as_p }}
+        <button type="submit">Send</button>
+      </form>
+    {% endif %}
   </div>
 {% endblock %}

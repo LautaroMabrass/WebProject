@@ -263,6 +263,23 @@ body {
     text-align: center;
 }
 
+.success-text {
+    color: #2d2d2d;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem; 
+}
+
+.success-tick {
+    text-align: center;
+}
+
+.tick-verde {
+    color: #28a745;
+    font-size: 2.5rem; 
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .intro {

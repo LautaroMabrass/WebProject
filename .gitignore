@@ -9,3 +9,4 @@ __pycache__/
 # Ignorar configuraciones locales
 .env
 .DS_Store
+webproject/settings.py 
