@@ -4,7 +4,24 @@
 
 {% block title %}Store - Myapp{% endblock %}
 
-{% block content%}
+{% block content %}
 
+<section class="store-section">
+    <h2 class="store-heading">Our products</h2>
+    <div class="product-grid">
+        {% for product in products_all %}
+            <div class="product-item">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-img">
+                <div class="product-details">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <p>Price: ${{ product.price }}</p>
+                    <p>Category: {{ product.category.name }}</p>
+                    <button class="buy-button">Buy now</button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 
-{% endblock%}
+{% endblock %}
