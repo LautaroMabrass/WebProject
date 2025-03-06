@@ -7,6 +7,39 @@
 {% block content %}
 
 <section class="store-section">
+    <!-- Mini Carrito -->
+    <div class="mini-cart">
+        <h3>Tu carrito</h3>
+        {% if request.session.shopping.items %}
+        <ul>
+          {% for key, item in request.session.shopping.items %}
+          <li>
+            <div class="cart-item-img">
+              <img src="{{ item.image }}" alt="{{ item.name }}">
+            </div>
+            <div class="cart-item-info">
+              <span class="item-name">{{ item.name }}</span>
+              <span class="item-amount">x{{ item.amount }}</span>
+              <span class="item-price">{{ item.price }} €</span>
+            </div>
+            <div class="cart-item-controls">
+              <a href="{% url 'shopping:add' item.product_id %}" class="control-button add-button" title="Añadir">➕</a>
+              <a href="{% url 'shopping:less' item.product_id %}" class="control-button remove-button" title="Quitar">➖</a>
+              <a href="{% url 'shopping:delete' item.product_id%}" class="control-button delete-button" title="Eliminar">🗑️</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <p>Total: {{import_total_shopping}} €</p>
+        <a href="{% url 'buy' %}" class="empty-cart-button-buy">Buy</a>
+        <a href="{% url 'shopping:clean' %}" class="empty-cart-button">Empty cart</a>
+        {% else %}
+        <p>No products in the shopping cart</p>
+        {% endif %}
+    </div>
+      
+      
+
     <h2 class="store-heading">Our products</h2>
     <div class="product-grid">
         {% for product in products_all %}
@@ -15,9 +48,9 @@
                 <div class="product-details">
                     <h3>{{ product.name }}</h3>
                     <p>{{ product.description }}</p>
-                    <p>Price: ${{ product.price }}</p>
+                    <p>Price: {{ product.price }}€</p>
                     <p>Category: {{ product.category.name }}</p>
-                    <button class="buy-button">Buy now</button>
+                    <a href="{% url 'shopping:add' product.id %}" class="buy-button">Add to cart</a>
                 </div>
             </div>
         {% endfor %}

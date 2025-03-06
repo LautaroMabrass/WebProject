@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Auth - Myapp{% endblock %}
+
+{% block content %}
+
+    <form method='post' action="">
+        {% csrf_token %}
+
+        {{form}}
+        
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+
+{% endblock %}

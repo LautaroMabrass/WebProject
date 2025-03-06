@@ -4,10 +4,6 @@ from django.core.mail import EmailMessage
 
 # Create your views here.
 
-from django.shortcuts import render, redirect
-from .forms import newForm
-from django.core.mail import EmailMessage
-
 def contact_view(request):
     if request.method == 'GET':
         return render(request, 'contact.html', {'new_form': newForm()})
