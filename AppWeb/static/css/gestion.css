@@ -442,7 +442,7 @@ body {
 /* Mini Carrito */
 .mini-cart {
     position: fixed;
-    top: 80px;
+    top: 100px;
     right: 20px;
     background: #ffffff;
     border: 1px solid #e0e0e0;

@@ -18,7 +18,7 @@ def contact_view(request):
                 f'Message from Client {name}',
                 f'A client with the email address {client_email} sent the following message: \n {content}',
                 'Contacto Web <appwebmail2025@gmail.com>',
-                ['lauti.mabras@gmail.com'],
+                ['appwebmail2025@gmail.com'],
                 reply_to=[client_email],
             )
 

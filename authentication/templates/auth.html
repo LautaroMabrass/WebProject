@@ -17,8 +17,8 @@
                 <p>Your password must follow this:</p>
                 <ul>
                     <li>It must contain at least 8 characters.</li>
-                    <li>It must not be too common</li>
-                    <li>It must not be entirely numeric</li>
+                    <li>It must not be too common.</li>
+                    <li>It must not be entirely numeric.</li>
                     <!-- Añade requisitos personalizados aquí -->
                 </ul>
             </div>
@@ -32,6 +32,15 @@
                 {% endif %}
             </p>
             
+            <!-- Campo email -->
+            <p>
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <div class="error">{{ form.email.errors }}</div>
+                {% endif %}
+            </p>
+
             <!-- Campo password1 con requisitos -->
             <p>
                 {{ form.password1.label_tag }}
@@ -52,6 +61,6 @@
             
             <button type="submit">Register</button>
         </form>
-        <a href="{% url 'login_' %}"> Already have an account? Log in</a>
+        <a href="{% url 'login_' %}">Already have an account? Log in</a>
     </div>
 {% endblock %}

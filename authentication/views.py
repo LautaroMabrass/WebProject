@@ -1,23 +1,21 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from .forms import CustomUserCreationForm
 # Create your views here.
 
 class Vregister(View):
-
-    def get(self,request):
-        form = UserCreationForm()
+    def get(self, request):
+        form = CustomUserCreationForm()
         return render(request, 'auth.html', {'form': form})
-    def post(self,request):
-        form = UserCreationForm(request.POST)
+
+    def post(self, request):
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-
-            user = form.save() # alamcena automaticamente en auth usuario y pass encriptada
-
-            login(request, user) # log automatico
-
+            user = form.save()  # Guarda el usuario con el email incluido
+            login(request, user)  # Inicio de sesión automático
             return redirect('home')
         else:
             return render(request, 'auth.html', {'form': form})

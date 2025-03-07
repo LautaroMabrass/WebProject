@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <p>Hola {{ user_name }},</p>
+    <p>Número de pedido: {{ orders.id }}</p>
+    <p>Email del usuario: {{ emailUser }}</p>
+    <p>Líneas de pedido:</p>
+    <ul>
+        {% for line in lines_orders %}
+            <li>{{ line.amount }} x {{ line.product_id.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
