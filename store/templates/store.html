@@ -23,10 +23,10 @@
               <span class="item-price">{{ item.price }} €</span>
             </div>
             <div class="cart-item-controls">
-              <a href="{% url 'shopping:add' item.product_id %}" class="control-button add-button" title="Añadir">➕</a>
-              <a href="{% url 'shopping:less' item.product_id %}" class="control-button remove-button" title="Quitar">➖</a>
-              <a href="{% url 'shopping:delete' item.product_id%}" class="control-button delete-button" title="Eliminar">🗑️</a>
-            </div>
+              <a href="{% url 'shopping:add' item.product_id %}" class="control-button add-button" title="Añadir"><i class="fas fa-plus"></i></a>
+              <a href="{% url 'shopping:less' item.product_id %}" class="control-button remove-button" title="Quitar"><i class="fas fa-minus"></i></a>
+              <a href="{% url 'shopping:delete' item.product_id %}" class="control-button delete-button" title="Eliminar"><i class="fas fa-trash"></i></a>
+          </div>
           </li>
           {% endfor %}
         </ul>

@@ -442,7 +442,7 @@ body {
 /* Mini Carrito */
 .mini-cart {
     position: fixed;
-    top: 20px;
+    top: 80px;
     right: 20px;
     background: #ffffff;
     border: 1px solid #e0e0e0;
@@ -601,4 +601,176 @@ background-color: #28a745;
 text-decoration: none;
 transform: scale(1.1);
 color: #d6e4e5;
+}
+
+.contentForm h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+.register-button {
+    background-color: var(--secondary-color); /* #ff6f61, un coral vibrante */
+    color: var(--cream-soft); /* Texto claro */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: filter 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 1rem auto 0; /* Centrado horizontalmente */
+}
+
+.register-button:hover {
+    filter: brightness(0.9); /* Oscurece ligeramente */
+    transform: translateY(-3px); /* Elevación sutil */
+    box-shadow: var(--shadow-hover); /* Sombra más pronunciada */
+}
+
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+.password-requirements {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.password-requirements ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Contenedor de logout */
+.logout-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f7f2; /* Fondo claro, ejemplo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Encabezado */
+.logout-container h2 {
+    font-family: 'Arial', sans-serif; /* Cambia por tu fuente */
+    font-size: 1.8rem;
+    color: #2c3e50; /* Color principal, ejemplo */
+    margin-bottom: 20px;
+}
+
+/* Párrafo */
+.logout-container p {
+    font-size: 1.1rem;
+    color: #7f8c8d; /* Color de texto, ejemplo */
+    margin-bottom: 30px;
+}
+
+/* Botón de logout */
+.logout-button {
+    background-color: #e74c3c; /* Color secundario, ejemplo */
+    color: #ffffff; /* Texto claro */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.logout-button:hover {
+    filter: brightness(0.9); /* Oscurece ligeramente */
+    transform: translateY(-3px); /* Eleva el botón */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--cream-soft); /* Fondo claro */
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.messages p.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Alinear etiquetas e inputs a la izquierda */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Sombra con el color secondary */
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--cream-soft);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
