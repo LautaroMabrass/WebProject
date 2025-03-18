@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-    --primary-color: #1a1a1a;    
-    --secondary-color: #ff6f61;  
-    --accent-color: #f5f5f5;     
-    --text-color: #2d2d2d;      
-    --background-soft: #d6e4e5;  
-    --cream-soft: #fdfaf6;       
+    --primary-color: #1a1a1a;
+    --secondary-color: #ff6f61;
+    --accent-color: #f5f5f5;
+    --text-color: #2d2d2d;
+    --background-soft: #d6e4e5;
+    --cream-soft: #fdfaf6;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
     --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.08);
@@ -15,7 +15,7 @@
 /* Estilos generales */
 body {
     font-family: var(--font-body);
-    background-color: var(--background-soft); 
+    background-color: var(--background-soft);
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
@@ -28,6 +28,7 @@ body {
     padding: 1rem 0;
     transition: background-color 0.3s ease;
 }
+
 #mainNav .navbar-brand {
     font-family: var(--font-heading);
     font-size: 1.75rem;
@@ -35,31 +36,34 @@ body {
     color: var(--secondary-color);
     letter-spacing: 1px;
 }
+
 #mainNav .nav-link {
-    color: var(--cream-soft); 
+    color: var(--cream-soft);
     font-size: 1.1rem;
     padding: 0.75rem 1.25rem;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.2s ease;
 }
+
 #mainNav .nav-link:hover,
 #mainNav .nav-item.active .nav-link {
     color: var(--secondary-color);
     transform: translateY(-2px);
 }
+
 #mainNav .nav-link i {
     margin-right: 6px;
 }
 
 /* Contenido principal */
 .content {
-    padding-top: 80px; 
+    padding-top: 80px;
 }
 
 /* Secciones generales */
 .page-section {
     padding: 6rem 2rem;
-    background-color: var(--background-soft); 
+    background-color: var(--background-soft);
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 12px;
@@ -78,6 +82,7 @@ body {
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .site-heading-lower {
     display: block;
     font-weight: 700;
@@ -96,32 +101,37 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 .intro-img {
     flex: 1;
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover;
 }
+
 .intro-img:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
 }
+
 .intro-text {
     flex: 1;
     max-width: 500px;
     padding: 2.5rem;
-    background-color: var(--cream-soft); 
+    background-color: var(--cream-soft);
     border-radius: 12px;
     box-shadow: var(--shadow-light);
     transition: box-shadow 0.3s ease;
 }
+
 .intro-text:hover {
     box-shadow: var(--shadow-hover);
 }
+
 .section-heading-upper {
     display: block;
     font-size: 1.25rem;
@@ -130,17 +140,18 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background-color: var(--cream-soft); 
+    background-color: var(--cream-soft);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
 }
+
 .section-heading-lower {
     display: block;
     font-size: 2.25rem;
     color: var(--primary-color);
     font-weight: 700;
     line-height: 1.2;
-    background-color: var(--cream-soft); 
+    background-color: var(--cream-soft);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
 }
@@ -149,23 +160,25 @@ body {
 .blog-post .intro-text {
     text-align: left;
 }
+
 .post-meta {
     font-size: 0.95rem;
     color: #666;
     margin-top: 0.75rem;
     font-style: italic;
-    background-color: var(--cream-soft); 
+    background-color: var(--cream-soft);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
 }
 
 /* CTA (Home) */
 .cta {
-    background-color: var(--background-soft); 
+    background-color: var(--background-soft);
     padding: 6rem 2rem;
 }
+
 .cta-inner {
-    background-color: var(--cream-soft); 
+    background-color: var(--cream-soft);
     padding: 3.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
@@ -179,17 +192,19 @@ body {
     margin-top: 2.5rem;
     text-align: center;
 }
+
 .category-list a {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.6rem 1.2rem;
     background-color: var(--primary-color);
-    color: var(--cream-soft); 
+    color: var(--cream-soft);
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .category-list a:hover {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
@@ -204,23 +219,27 @@ body {
     max-width: 700px;
     margin: 6rem auto;
 }
+
 .contentForm form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .contentForm p {
-    margin: 0; 
+    margin: 0;
     display: flex;
-    flex-direction: column; 
-    gap: 0.25rem; 
+    flex-direction: column;
+    gap: 0.25rem;
 }
+
 .contentForm label {
     font-weight: 600;
     color: var(--primary-color);
     font-size: 1rem;
-    text-align: left; 
+    text-align: left;
 }
+
 .contentForm input,
 .contentForm textarea {
     padding: 0.75rem;
@@ -231,12 +250,14 @@ body {
     color: var(--text-color);
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
+
 .contentForm input:focus,
 .contentForm textarea:focus {
     border-color: var(--secondary-color);
     background-color: #cfd8dc;
     outline: none;
 }
+
 .contentForm button {
     background-color: var(--primary-color);
     color: var(--cream-soft);
@@ -249,6 +270,7 @@ body {
     letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
+
 .contentForm button:hover {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
@@ -268,7 +290,7 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
 }
 
 .success-tick {
@@ -277,11 +299,11 @@ body {
 
 .tick-verde {
     color: #28a745;
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
 }
 
 .cross-roja {
-    color: #dc3545; /* Rojo para error, similar a Bootstrap "danger" */
+    color: #dc3545;
     font-size: 2.5rem;
 }
 
@@ -295,10 +317,12 @@ body {
         flex-direction: column;
         padding: 0 1rem;
     }
+
     .intro-img,
     .intro-text {
         max-width: 100%;
     }
+
     .site-heading {
         font-size: 2.5rem;
         padding: 3rem 1rem;
@@ -309,9 +333,11 @@ body {
     .site-heading {
         font-size: 2rem;
     }
+
     .intro-text {
         padding: 1.5rem;
     }
+
     .contentForm {
         padding: 2rem;
         margin: 4rem auto;
@@ -439,6 +465,7 @@ body {
         padding: 15px;
     }
 }
+
 /* Mini Carrito */
 .mini-cart {
     position: fixed;
@@ -451,139 +478,140 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 320px;
     z-index: 1000;
-  }
-  
+}
+
 .mini-cart h3 {
-font-family: var(--font-heading);
-font-size: 1.8rem;
-color: var(--primary-color);
-margin-bottom: 15px;
-text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .mini-cart ul {
-list-style: none;
-margin: 0;
-padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .mini-cart li {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px 0;
-border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .mini-cart li:last-child {
-border-bottom: none;
+    border-bottom: none;
 }
 
 .cart-item-img img {
-width: 50px;
-height: 50px;
-border-radius: 8px;
-object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .cart-item-info {
-flex: 1;
-margin: 0 10px;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cart-item-info .item-name {
-font-weight: 600;
-color: var(--text-color);
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .cart-item-info .item-amount,
 .cart-item-info .item-price {
-font-size: 0.9rem;
-color: #777;
+    font-size: 0.9rem;
+    color: #777;
 }
 
 .cart-item-controls {
-display: flex;
-gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .control-button {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 32px;
-height: 32px;
-font-size: 1.3rem;
-text-decoration: none;
-border-radius: 50%;
-transition: background-color 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Aseguramos que no se subraye el texto al hacer hover */
+
 .control-button:hover,
 .empty-cart-button:hover {
-text-decoration: none;
+    text-decoration: none;
 }
 
 /* Botón para aumentar cantidad */
 .add-button {
-background-color: #4caf50; /* Verde */
-color: #fff;
+    background-color: #4caf50;
+    /* Verde */
+    color: #fff;
 }
 
 .add-button:hover {
-background-color: #43a047;
-transform: scale(1.1);
+    background-color: #43a047;
+    transform: scale(1.1);
 }
 
 /* Botón para disminuir cantidad */
 .remove-button {
-background-color: #e53935; 
-color: #fff;
+    background-color: #e53935;
+    color: #fff;
 }
 
 .remove-button:hover {
-background-color: #dc3545;
-transform: scale(1.1);
+    background-color: #dc3545;
+    transform: scale(1.1);
 }
 
-/* Botón para eliminar: tacho de basura en rojo */
+/* Botón para eliminar */
 .delete-button {
-background-color: #fff;
-color: #e53935;
+    background-color: #fff;
+    color: #e53935;
 }
 
 .delete-button:hover {
-background-color: #e53935;
-color: #fff;
-transform: scale(1.1);
+    background-color: #e53935;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 /* Botón para vaciar el carrito */
 .empty-cart-button {
-display: block;
-text-align: center;
-margin-top: 15px;
-padding: 10px;
-background-color: var(--secondary-color);
-color: #fff;
-border-radius: 25px;
-text-decoration: none;
-font-weight: 600;
-transition: background-color 0.3s, transform 0.2s;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .empty-cart-button:hover {
-background-color: #e55c50;
-text-decoration: none;
-transform: scale(1.1);
-color: #d6e4e5;
+    background-color: #e55c50;
+    text-decoration: none;
+    transform: scale(1.1);
+    color: #d6e4e5;
 }
 
-.empty-cart-button-buy{
+.empty-cart-button-buy {
     display: block;
     text-align: center;
     margin-top: 15px;
@@ -597,10 +625,10 @@ color: #d6e4e5;
 }
 
 .empty-cart-button-buy:hover {
-background-color: #28a745;
-text-decoration: none;
-transform: scale(1.1);
-color: #d6e4e5;
+    background-color: #28a745;
+    text-decoration: none;
+    transform: scale(1.1);
+    color: #d6e4e5;
 }
 
 .contentForm h2 {
@@ -613,8 +641,8 @@ color: #d6e4e5;
 
 
 .register-button {
-    background-color: var(--secondary-color); /* #ff6f61, un coral vibrante */
-    color: var(--cream-soft); /* Texto claro */
+    background-color: var(--secondary-color);
+    color: var(--cream-soft);
     padding: 1rem 2rem;
     border: none;
     border-radius: 6px;
@@ -624,13 +652,13 @@ color: #d6e4e5;
     letter-spacing: 1px;
     transition: filter 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     display: block;
-    margin: 1rem auto 0; /* Centrado horizontalmente */
+    margin: 1rem auto 0;
 }
 
 .register-button:hover {
-    filter: brightness(0.9); /* Oscurece ligeramente */
-    transform: translateY(-3px); /* Elevación sutil */
-    box-shadow: var(--shadow-hover); /* Sombra más pronunciada */
+    filter: brightness(0.9);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 
@@ -652,36 +680,36 @@ color: #d6e4e5;
     margin-left: 20px;
 }
 
-/* Contenedor de logout */
+
 .logout-container {
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #f9f7f2; /* Fondo claro, ejemplo */
+    background-color: #f9f7f2;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Encabezado */
+
 .logout-container h2 {
-    font-family: 'Arial', sans-serif; /* Cambia por tu fuente */
+    font-family: 'Arial', sans-serif;
     font-size: 1.8rem;
-    color: #2c3e50; /* Color principal, ejemplo */
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-/* Párrafo */
+
 .logout-container p {
     font-size: 1.1rem;
-    color: #7f8c8d; /* Color de texto, ejemplo */
+    color: #7f8c8d;
     margin-bottom: 30px;
 }
 
 /* Botón de logout */
 .logout-button {
-    background-color: #e74c3c; /* Color secundario, ejemplo */
-    color: #ffffff; /* Texto claro */
+    background-color: #e74c3c;
+    color: #ffffff;
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
@@ -692,11 +720,10 @@ color: #d6e4e5;
     transition: filter 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para el botón */
 .logout-button:hover {
-    filter: brightness(0.9); /* Oscurece ligeramente */
-    transform: translateY(-3px); /* Eleva el botón */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    filter: brightness(0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -705,7 +732,7 @@ color: #d6e4e5;
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
-    background-color: var(--cream-soft); /* Fondo claro */
+    background-color: var(--cream-soft);
     border-radius: 12px;
     box-shadow: var(--shadow-light);
     text-align: center;
@@ -729,7 +756,7 @@ color: #d6e4e5;
 
 .form-group {
     margin-bottom: 15px;
-    text-align: left; /* Alinear etiquetas e inputs a la izquierda */
+    text-align: left;
 }
 
 .form-group label {
@@ -752,7 +779,7 @@ color: #d6e4e5;
 
 .form-group input:focus {
     border-color: var(--secondary-color);
-    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Sombra con el color secondary */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
     outline: none;
 }
 
